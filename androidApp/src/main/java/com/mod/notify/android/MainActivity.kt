@@ -15,6 +15,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavArgument
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.mod.notify.android.note_details.NoteDetailsScreen
 import com.mod.notify.android.note_list.NoteListScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -67,7 +74,28 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    NoteListScreen()
+                    val navController = rememberNavController()
+                    NavHost(
+                        navController = navController,
+                        startDestination = "note_list"
+                    ) {
+                        composable(route = "note_list") {
+                            NoteListScreen(navController = navController)
+                        }
+
+                        composable(
+                            route = "note_details/{noteId}",
+                            arguments = listOf(
+                                navArgument(name = "noteId") {
+                                    type = NavType.LongType
+                                    defaultValue = -1L
+                                }
+                            )
+                        ) { navBackStackEntry ->
+                            val noteId = navBackStackEntry.arguments?.getLong("noteId") ?: -1L
+                            NoteDetailsScreen(noteId = noteId, navController = navController)
+                        }
+                    }
                 }
             }
         }
