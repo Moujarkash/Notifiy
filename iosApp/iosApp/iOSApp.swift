@@ -10,6 +10,9 @@ struct iOSApp: App {
 		WindowGroup {
             NavigationView {
                 NoteListScreen(noteDataSource: databaseModule.noteDataSource)
+                    .navigationTitle("")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
             }
 		}
 	}

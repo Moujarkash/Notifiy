@@ -17,6 +17,7 @@
 		C158A75B28F33D290011C391 /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158A75A28F33D290011C391 /* NoteItem.swift */; };
 		C158A75D28F340560011C391 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158A75C28F340560011C391 /* Colors.swift */; };
 		C158A76028F34C490011C391 /* NoteDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158A75F28F34C490011C391 /* NoteDetailsScreen.swift */; };
+		C158A76228F350AC0011C391 /* NoteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158A76128F350AC0011C391 /* NoteDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		C158A75A28F33D290011C391 /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		C158A75C28F340560011C391 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C158A75F28F34C490011C391 /* NoteDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsScreen.swift; sourceTree = "<group>"; };
+		C158A76128F350AC0011C391 /* NoteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				C158A75F28F34C490011C391 /* NoteDetailsScreen.swift */,
+				C158A76128F350AC0011C391 /* NoteDetailsViewModel.swift */,
 			);
 			path = note_details;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C158A76228F350AC0011C391 /* NoteDetailsViewModel.swift in Sources */,
 				C158A75B28F33D290011C391 /* NoteItem.swift in Sources */,
 				C158A75928F3301A0011C391 /* SearchTextField.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
