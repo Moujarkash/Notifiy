@@ -20,6 +20,9 @@ android {
     }
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
+
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.3.0"
@@ -49,8 +52,8 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
 
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.42")
+    kapt("com.google.dagger:hilt-android-compiler:2.42")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     implementation("androidx.navigation:navigation-compose:2.5.2")
