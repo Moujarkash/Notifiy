@@ -23,7 +23,7 @@ struct NoteListScreen: View {
     var body: some View {
         VStack {
             ZStack {
-                NavigationLink(destination: NoteDetailsScreen(noteDataSource: self.noteDataSource, noteId: selectedNoteId), isActive: $isNoteSelected) {
+                NavigationLink(destination: NoteDetailsScreen(noteDataSource: noteDataSource, noteId: selectedNoteId), isActive: $isNoteSelected) {
                     NoteDetailsScreen(noteDataSource: noteDataSource, noteId: selectedNoteId)
                 }.frame(width: 0.0, height: 0.0).hidden()
 
@@ -67,7 +67,7 @@ struct NoteListScreen: View {
             .listRowSeparator(.hidden)
         }
         .onAppear {
-            viewModel.setNoteDataSource(noteDataSource: self.noteDataSource)
+            viewModel.setNoteDataSource(noteDataSource: noteDataSource)
         }
     }
 }

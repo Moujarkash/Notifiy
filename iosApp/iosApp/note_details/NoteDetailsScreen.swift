@@ -33,7 +33,7 @@ struct NoteDetailsScreen: View {
         .toolbar {
             Button(action: {
                 viewModel.saveNote {
-                    self.presentation.wrappedValue.dismiss()
+                    presentation.wrappedValue.dismiss()
                 }
             }) {
                 Image(systemName: "checkmark")
